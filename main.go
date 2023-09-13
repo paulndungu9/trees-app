@@ -74,7 +74,7 @@ if err:=c.BindJSON(&newTree);err!=nil {
 	return
 }
 trees=append(trees,newTree)
-c.IndentedJSON(201,newTree)
+c.IndentedJSON(http.StatusCreated,newTree)
 }
 func main(){
 	r:=gin.Default()
